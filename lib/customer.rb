@@ -16,4 +16,8 @@ class Customer
   def new_meal(waiter, total, tip=0)
     Meal.new(waiter, self, total, tip)
   end
+
+  def waiters
+    meals.collect {|meal|meal.waiter}
+  end
 end
