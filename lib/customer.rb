@@ -18,6 +18,6 @@ class Customer
   end
 
   def waiters
-    meals.collect {|meal|meal.waiter}
+    meals.map {|meal|meal.waiter}
   end
 end
